@@ -15,7 +15,7 @@ pipeline {
             steps {
                 // Checkout the code from the inputted branch
                 echo "Checking out branch: ${BRANCH}"
-                git branch: params.BRANCH, url: GIT_REPO_URL
+                git branch: BRANCH, url: GIT_REPO_URL
             }
         }
         stage('Build') { 
